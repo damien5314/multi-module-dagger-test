@@ -12,12 +12,19 @@ class MyApplication : Application(), HasActivityInjector {
     @Inject
     lateinit var activityInjector: DispatchingAndroidInjector<Activity>
 
+    private lateinit var myComponent: MyComponent
+
     override fun activityInjector(): AndroidInjector<Activity> = activityInjector
 
     override fun onCreate() {
         super.onCreate()
         // Hoping we don't need to do this now-- ActivityInjector should provide everything
-//        component = buildDaggerGraph()
-//        component.inject(this)
+        myComponent = buildDaggerGraph()
+        myComponent.inject(this)
+    }
+
+    private fun buildDaggerGraph(): MyComponent {
+        return DaggerMyComponent.builder()
+            .build()
     }
 }
