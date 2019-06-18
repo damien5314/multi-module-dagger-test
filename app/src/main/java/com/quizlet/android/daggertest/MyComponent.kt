@@ -9,7 +9,7 @@ import dagger.android.support.AndroidSupportInjectionModule
 @Component(
     modules = [
         MyModule::class,
-        ActivityBindingModule::class, // For defining providers in the new DI system
+        ActivityBindingModule::class,
         AndroidSupportInjectionModule::class
     ]
 )

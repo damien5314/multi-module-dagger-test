@@ -4,7 +4,11 @@ import dagger.Subcomponent
 import dagger.android.AndroidInjector
 
 @ActivityScope
-@Subcomponent
+@Subcomponent(
+    modules = [
+        MyActivityModule::class
+    ]
+)
 interface MyActivitySubcomponent : AndroidInjector<MyActivity> {
 
     @Subcomponent.Builder
