@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.quizlet.android.uishared">
+
+    <application>
+
+        <activity android:name="com.quizlet.android.uishared.TestActivity" />
+
+    </application>
+
+</manifest>
