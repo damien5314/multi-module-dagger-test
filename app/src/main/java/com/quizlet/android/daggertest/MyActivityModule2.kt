@@ -1,14 +1,14 @@
 package com.quizlet.android.daggertest
 
+import dagger.Binds
 import dagger.Module
-import dagger.Provides
 
 /**
  * TODO documentation
  */
 @Module
-class MyActivityModule2 {
+abstract class MyActivityModule2 {
 
-    @Provides
-    fun provideMyDependency(): MyDependency = MyDependencyImpl()
+    @Binds
+    abstract fun provideMyDependency(impl: MyDependencyImpl): MyDependency
 }

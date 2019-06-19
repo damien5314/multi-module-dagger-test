@@ -1,6 +1,8 @@
 package com.quizlet.android.daggertest
 
-class MyDependencyImpl : MyDependency {
+import javax.inject.Inject
+
+class MyDependencyImpl @Inject constructor() : MyDependency {
 
     override fun calculate(): Int = 42
 }
