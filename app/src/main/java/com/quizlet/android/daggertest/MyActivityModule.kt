@@ -1,5 +1,6 @@
 package com.quizlet.android.daggertest
 
+import com.quizlet.android.uishared.MyDependency
 import dagger.Binds
 import dagger.Module
 import dagger.android.AndroidInjector
