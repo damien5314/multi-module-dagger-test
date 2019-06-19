@@ -2,7 +2,6 @@ package com.quizlet.android.daggertest
 
 import dagger.Binds
 import dagger.Module
-import dagger.Provides
 import dagger.android.AndroidInjector
 import dagger.multibindings.ClassKey
 import dagger.multibindings.IntoMap
@@ -10,6 +9,9 @@ import dagger.multibindings.IntoMap
 @Module(
     subcomponents = [
         MyActivitySubcomponent::class
+    ],
+    includes = [
+        MyActivityModule2::class
     ]
 )
 abstract class MyActivityModule {
@@ -19,11 +21,4 @@ abstract class MyActivityModule {
     @ClassKey(MyActivity::class)
     abstract fun bindMyActivityInjectorFactory(factory: MyActivitySubcomponent.Factory)
             : AndroidInjector.Factory<*>
-
-    @Module
-    companion object {
-
-        @Provides
-        fun provideMyDependency(): MyDependency = MyDependencyImpl()
-    }
 }
