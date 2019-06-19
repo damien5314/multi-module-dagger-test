@@ -20,6 +20,7 @@ abstract class MyActivityModule {
     abstract fun bindMyActivityInjectorFactory(factory: MyActivitySubcomponent.Factory)
             : AndroidInjector.Factory<*>
 
+    // TODO: Move this to a module in uishared
     @Binds
     abstract fun provideMyDependency(impl: MyDependencyImpl): MyDependency
 }

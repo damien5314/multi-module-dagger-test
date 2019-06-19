@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.quizlet.android.uishared">
 
-    <application>
+    <application android:name=".TestApplication">
 
         <activity android:name="com.quizlet.android.uishared.TestActivity" />
 

@@ -18,7 +18,6 @@ class MyApplication : Application(), HasActivityInjector {
 
     override fun onCreate() {
         super.onCreate()
-        // Hoping we don't need to do this now-- ActivityInjector should provide everything
         myAppComponent = buildDaggerGraph()
         myAppComponent.inject(this)
     }
