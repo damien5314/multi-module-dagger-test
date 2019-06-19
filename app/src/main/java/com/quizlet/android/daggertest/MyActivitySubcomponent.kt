@@ -6,11 +6,10 @@ import dagger.android.AndroidInjector
 @ActivityScope
 @Subcomponent(
     modules = [
-        MyActivityModule::class
     ]
 )
 interface MyActivitySubcomponent : AndroidInjector<MyActivity> {
 
-    @Subcomponent.Builder
-    abstract class Builder : MyActivitySubcomponentBuilder()
+    @Subcomponent.Factory
+    interface Factory : AndroidInjector.Factory<MyActivity>
 }

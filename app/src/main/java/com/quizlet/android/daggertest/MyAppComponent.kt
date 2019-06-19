@@ -5,12 +5,11 @@ import dagger.android.support.AndroidSupportInjectionModule
 
 @Component(
     modules = [
-        MyModule::class,
-        ActivityBindingModule::class,
-        AndroidSupportInjectionModule::class
+        AndroidSupportInjectionModule::class,
+        MyActivityModule::class
     ]
 )
-interface MyComponent {
+interface MyAppComponent {
 
     fun inject(application: MyApplication)
 }
