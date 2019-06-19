@@ -2,6 +2,7 @@ package com.quizlet.android.daggertest
 
 import android.os.Bundle
 import android.widget.Toast
+import com.quizlet.android.uishared.BaseActivity
 import dagger.android.AndroidInjection
 import javax.inject.Inject
 
