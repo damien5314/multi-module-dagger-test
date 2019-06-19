@@ -1,4 +1,4 @@
-package com.quizlet.android.daggertest
+package com.quizlet.android.uishared
 
 import java.lang.annotation.Retention
 import java.lang.annotation.RetentionPolicy
