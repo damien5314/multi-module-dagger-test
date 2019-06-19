@@ -9,9 +9,6 @@ import dagger.multibindings.IntoMap
 @Module(
     subcomponents = [
         MyActivitySubcomponent::class
-    ],
-    includes = [
-        MyActivityModule2::class
     ]
 )
 abstract class MyActivityModule {
@@ -21,4 +18,7 @@ abstract class MyActivityModule {
     @ClassKey(MyActivity::class)
     abstract fun bindMyActivityInjectorFactory(factory: MyActivitySubcomponent.Factory)
             : AndroidInjector.Factory<*>
+
+    @Binds
+    abstract fun provideMyDependency(impl: MyDependencyImpl): MyDependency
 }
